@@ -1,0 +1,162 @@
+.contact-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-toggle {
+  background: #0d6efd;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.contact-toggle:hover {
+  background: #0b5ed7;
+  transform: scale(1.05);
+}
+
+.contact-popup {
+  background: white;
+  color: #333;
+  padding: 20px;
+  width: 270px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-popup h4 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.contact-popup p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.contact-popup a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.contact-popup a:hover {
+  text-decoration: underline;
+}
+/* Close button inside popup */
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #0d6efd;
+}
+.contact-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.contact-widget:hover {
+  transform: scale(1.1);
+}
+
+.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #fff;
+  width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h4 {
+  margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.live-class-btn {
+  margin-top: 12px;
+  padding: 8px 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  color: gray;
+  margin-top: 10px;
+}

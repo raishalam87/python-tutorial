@@ -1,0 +1,133 @@
+.tutorial-page {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-height: 80vh;
+  overflow-y: auto;
+
+  /* Sticky properties */
+  position: sticky;
+  top: 80px; /* Adjust based on your header height */
+  align-self: flex-start;
+}
+
+/* Sidebar items */
+.sidebar-item {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background-color: #f0f4f8;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #d6eaff;
+}
+
+/* Main content area */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Topic box styling */
+.topic-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.topic-box h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.topic-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* Code syntax block */
+.syntax-box {
+  background: #1f1f1f;
+  color: #00ff90;
+  padding: 12px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Fallback if no topic selected */
+.no-topic-message {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Images */
+.images {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Topic Headings */
+.topic-box h3 {
+  margin-top: 16px;
+  color: #2c3e50;
+}
+
+/* List styling inside topics */
+.topic-box ul {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.topic-box li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .tutorial-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+  }
+
+  .content-area {
+    width: 100%;
+  }
+}
