@@ -20,9 +20,9 @@ function ContactWidget() {
           <p>Thank you for visiting 🙏</p>
           <p>How can we help you today?</p>
           <div className="contact-info">
-            <p><FaEnvelope /> Email: <a href="mailto:python.support@example.com">python.support@example.com</a></p>
-            <p><FaPhoneAlt /> Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
-            <p><FaWhatsapp /> WhatsApp: <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
+            <p><FaEnvelope /> Email: <a href="mailto:python.support@gmail.com">python.support@example.com</a></p>
+            <p><FaPhoneAlt /> Phone: <a href="tel:+919876543210">+91 7703988759</a></p>
+            <p><FaWhatsapp /> WhatsApp: <a href="https://wa.me/917703988759" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
             <button className="live-class-btn">
               <FaVideo /> Join Live Class
             </button>
