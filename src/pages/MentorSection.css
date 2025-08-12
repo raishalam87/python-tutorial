@@ -1,0 +1,71 @@
+/* src/components/MentorSection.css */
+
+.mentor-container {
+  background-color: #f9fafb;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mentor-title {
+  font-size: 2.2rem;
+  color: #1d3557;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.mentor-card {
+  max-width: 400px;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #0a4d8c;
+}
+
+.mentor-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #0a4d8c;
+  margin-bottom: 5px;
+}
+
+.mentor-role {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.mentor-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+  .mentor-card {
+    padding: 25px 15px;
+  }
+
+  .mentor-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mentor-name {
+    font-size: 1.4rem;
+  }
+
+  .mentor-desc {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,114 @@
+/* src/components/CoursesSection.css */
+
+.courses-container {
+  padding: 40px 20px;
+  background: #f4f7fc;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #1d3557;
+  font-weight: 700;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  color: #0a4d8c;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  min-height: 50px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.join-btn,
+.learn-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.join-btn {
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+}
+
+.join-btn:hover {
+  background-color: #20b954;
+}
+
+.learn-btn {
+  background-color: #0a4d8c;
+  color: white;
+}
+
+.learn-btn:hover {
+  background-color: #083c6a;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}

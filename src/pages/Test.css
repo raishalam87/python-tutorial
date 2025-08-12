@@ -1,0 +1,90 @@
+/* ✅ Name Input & Start Button */
+.name-input {
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 10px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.name-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.start-btn {
+  margin-top: 16px;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #007bff, #00bfff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #0056b3, #00aaff);
+}
+
+/* ✅ Check & Next Button */
+.check-btn, .next-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-btn {
+  background-color: #28a745;
+}
+
+.check-btn:hover {
+  background-color: #218838;
+}
+
+.next-btn {
+  background-color: #17a2b8;
+}
+
+.next-btn:hover {
+  background-color: #138496;
+}
+
+/* ✅ Responsive container */
+.test-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.question-card {
+  margin-top: 30px;
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* ✅ Responsive */
+@media (max-width: 500px) {
+  .name-input, .start-btn, .check-btn, .next-btn {
+    width: 100%;
+  }
+
+  .question-card {
+    padding: 15px;
+  }
+}

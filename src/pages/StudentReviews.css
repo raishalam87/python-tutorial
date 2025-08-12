@@ -1,0 +1,75 @@
+/* src/components/StudentReviews.css */
+
+.review-container {
+  background: #1e1e2f; /* dark blue-gray */
+  padding: 60px 20px;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.review-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.review-card {
+  background: #2a2a40;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.review-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4fc3f7;
+  margin-bottom: 20px;
+}
+
+.review-feedback {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #dcdcdc;
+  margin-bottom: 12px;
+  max-width: 500px;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #4fc3f7;
+  font-size: 1rem;
+}
+
+/* Dots color */
+.slick-dots li button:before {
+  color: #fff !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #4fc3f7 !important;
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    padding: 25px 15px;
+  }
+
+  .review-feedback {
+    font-size: 1rem;
+  }
+
+  .review-name {
+    font-size: 0.95rem;
+  }
+}

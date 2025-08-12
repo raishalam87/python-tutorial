@@ -1,0 +1,186 @@
+// tests/dataTypesTest.js
+
+const dataTypesTest = [
+  {
+    id: 1,
+    question: "Which of the following is a mutable data type in Python?",
+    options: ["int", "float", "list", "str"],
+    correctAnswer: "list",
+  },
+  {
+    id: 2,
+    question: "What is the type of: type(10.5)?",
+    options: ["int", "str", "float", "bool"],
+    correctAnswer: "float",
+  },
+  {
+    id: 3,
+    question: "Which of the following is an immutable data type?",
+    options: ["list", "set", "dict", "tuple"],
+    correctAnswer: "tuple",
+  },
+  {
+    id: 4,
+    question: "What will type(True) return?",
+    options: ["<class 'int'>", "<class 'bool'>", "<class 'str'>", "<class 'float'>"],
+    correctAnswer: "<class 'bool'>",
+  },
+  {
+    id: 5,
+    question: "Which of the following is not a standard Python data type?",
+    options: ["set", "dictionary", "character", "tuple"],
+    correctAnswer: "character",
+  },
+  {
+    id: 6,
+    question: "What is the output of: type([])?",
+    options: ["list", "<class 'tuple'>", "<class 'list'>", "<class 'dict'>"],
+    correctAnswer: "<class 'list'>",
+  },
+  {
+    id: 7,
+    question: "Which data type is used to store True or False?",
+    options: ["str", "bool", "int", "float"],
+    correctAnswer: "bool",
+  },
+  {
+    id: 8,
+    question: "Which function is used to check the data type of a variable?",
+    options: ["check()", "typeof()", "type()", "isType()"],
+    correctAnswer: "type()",
+  },
+  {
+    id: 9,
+    question: "What is the type of: type(\"Python\")?",
+    options: ["<class 'list'>", "<class 'str'>", "<class 'int'>", "<class 'bool'>"],
+    correctAnswer: "<class 'str'>",
+  },
+  {
+    id: 10,
+    question: "Which data type stores key-value pairs?",
+    options: ["tuple", "list", "set", "dictionary"],
+    correctAnswer: "dictionary",
+  },
+  {
+    id: 11,
+    question: "Which of these is a sequence data type?",
+    options: ["int", "list", "bool", "float"],
+    correctAnswer: "list",
+  },
+  {
+    id: 12,
+    question: "Which data type is unordered and mutable?",
+    options: ["tuple", "dict", "set", "list"],
+    correctAnswer: "set",
+  },
+  {
+    id: 13,
+    question: "What is the output of: type({})?",
+    options: ["<class 'list'>", "<class 'set'>", "<class 'dict'>", "<class 'tuple'>"],
+    correctAnswer: "<class 'dict'>",
+  },
+  {
+    id: 14,
+    question: "Which one is an example of a string?",
+    options: ["123", "'123'", "123.0", "True"],
+    correctAnswer: "'123'",
+  },
+  {
+    id: 15,
+    question: "Which data type would be best to store a price like 99.99?",
+    options: ["int", "float", "str", "bool"],
+    correctAnswer: "float",
+  },
+  {
+    id: 16,
+    question: "Which function converts a string to an integer?",
+    options: ["str()", "int()", "float()", "bool()"],
+    correctAnswer: "int()",
+  },
+  {
+    id: 17,
+    question: "Which of these is a numeric data type?",
+    options: ["int", "str", "tuple", "set"],
+    correctAnswer: "int",
+  },
+  {
+    id: 18,
+    question: "Which of these data types is iterable?",
+    options: ["int", "float", "list", "bool"],
+    correctAnswer: "list",
+  },
+  {
+    id: 19,
+    question: "What is the output of type((1,))?",
+    options: ["<class 'int'>", "<class 'tuple'>", "<class 'list'>", "<class 'set'>"],
+    correctAnswer: "<class 'tuple'>",
+  },
+  {
+    id: 20,
+    question: "Which data type can be used as dictionary keys?",
+    options: ["list", "tuple", "set", "dict"],
+    correctAnswer: "tuple",
+  },
+  {
+    id: 21,
+    question: "Which data type cannot be changed after creation?",
+    options: ["list", "tuple", "set", "dict"],
+    correctAnswer: "tuple",
+  },
+  {
+    id: 22,
+    question: "What is the output of type(None)?",
+    options: ["<class 'NoneType'>", "<class 'null'>", "<class 'void'>", "<class 'none'>"],
+    correctAnswer: "<class 'NoneType'>",
+  },
+  {
+    id: 23,
+    question: "Which data type can store duplicate values?",
+    options: ["set", "dict", "list", "None"],
+    correctAnswer: "list",
+  },
+  {
+    id: 24,
+    question: "Which data type removes duplicates automatically?",
+    options: ["list", "tuple", "set", "dict"],
+    correctAnswer: "set",
+  },
+  {
+    id: 25,
+    question: "Which of these is a floating-point number?",
+    options: ["42", "'42.0'", "42.0", "None"],
+    correctAnswer: "42.0",
+  },
+  {
+    id: 26,
+    question: "What type is produced by 5 // 2 in Python?",
+    options: ["float", "int", "str", "bool"],
+    correctAnswer: "int",
+  },
+  {
+    id: 27,
+    question: "Which one is a valid set declaration?",
+    options: ["set = {}", "set = []", "set = set()", "set = ()"],
+    correctAnswer: "set = set()",
+  },
+  {
+    id: 28,
+    question: "Which data type is best for storing phone numbers?",
+    options: ["int", "float", "str", "bool"],
+    correctAnswer: "str",
+  },
+  {
+    id: 29,
+    question: "Which function checks if a variable is of a certain type?",
+    options: ["is()", "type()", "isinstance()", "typeof()"],
+    correctAnswer: "isinstance()",
+  },
+  {
+    id: 30,
+    question: "What is the output of: type('True')?",
+    options: ["<class 'bool'>", "<class 'str'>", "<class 'int'>", "<class 'NoneType'>"],
+    correctAnswer: "<class 'str'>",
+  },
+];
+
+export default dataTypesTest;

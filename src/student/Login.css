@@ -1,0 +1,126 @@
+.auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 114, 255, 0.4);
+  position: relative;
+  border-image: linear-gradient(135deg, #00c6ff, #0072ff) 1;
+  animation: border-glow 3s infinite alternate, shadow-pulse 2s infinite ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+@keyframes border-glow {
+  0% {
+    border-image: linear-gradient(135deg, #00c6ff, #0072ff) 1;
+  }
+  100% {
+    border-image: linear-gradient(135deg, #0072ff, #00c6ff) 1;
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 114, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.3);
+  }
+}
+
+.auth-container h2 {
+  margin-bottom: 24px;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Input group with icon */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  padding-right: 40px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #10b981;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Buttons */
+.auth-container button {
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #059669;
+}
+
+/* Link */
+.auth-container .link {
+  display: block;
+  margin-top: 16px;
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.auth-container .link:hover {
+  color: #059669;
+}
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+
+/* Responsive */
+@media (max-width: 500px) {
+  .auth-container {
+    margin: 40px 20px;
+    padding: 24px 20px;
+  }
+}

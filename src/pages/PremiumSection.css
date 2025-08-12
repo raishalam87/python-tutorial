@@ -1,0 +1,89 @@
+.premium-section {
+  padding: 50px 20px;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+.premium-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.premium-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.premium-card {
+  width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+}
+
+.premium-image {
+  width: 80px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.premium-card h3 {
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.premium-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2b6cb0;
+}
+
+.premium-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.join-btn {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.learn-btn {
+  background-color: #edf2f7;
+  color: #2d3748;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.premium-gold {
+  border-top: 5px solid #ffb703;
+}
+
+.premium-platinum {
+  border-top: 5px solid #6b46c1;
+}

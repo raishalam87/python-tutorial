@@ -1,0 +1,99 @@
+.choose-us-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.choose-us-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.choose-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.choose-us-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.choose-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.choose-card:hover {
+  transform: translateY(-6px);
+}
+
+.choose-icon {
+  font-size: 3rem;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.choose-card h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.choose-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.choose-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.choose-btn:hover {
+  background-color: #1e40af;
+}
+.premium-batch-card {
+  background: #fff;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(117, 151, 222, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.premium-batch-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-date-bold {
+  font-size: 1.2rem;
+  color: #111;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.premium-btn {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.premium-btn:hover {
+  background-color: #ffe066;
+  color: #fff;
+}

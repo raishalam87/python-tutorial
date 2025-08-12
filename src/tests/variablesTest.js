@@ -1,0 +1,191 @@
+// tests/variablesTest.js
+
+const variablesTest = [
+  {
+    id: 1,
+    question: "What is a variable in Python?",
+    options: [
+      "A reserved word",
+      "A value that changes during program execution",
+      "A fixed value",
+      "A function name",
+    ],
+    correctAnswer: "A value that changes during program execution",
+  },
+  {
+    id: 2,
+    question: "Which of the following is a valid variable name?",
+    options: ["1value", "value_1", "value-1", "value 1"],
+    correctAnswer: "value_1",
+  },
+  {
+    id: 3,
+    question: "Which keyword is used to declare a variable in Python?",
+    options: ["let", "int", "var", "None of the above"],
+    correctAnswer: "None of the above",
+  },
+  {
+    id: 4,
+    question: "What will be the output of: x = 5; print(type(x))?",
+    options: ["<class 'string'>", "<class 'float'>", "<class 'int'>", "<class 'bool'>"],
+    correctAnswer: "<class 'int'>",
+  },
+  {
+    id: 5,
+    question: "What is the correct way to assign the value 10 to variable x?",
+    options: ["x == 10", "x = 10", "int x = 10", "x := 10"],
+    correctAnswer: "x = 10",
+  },
+  {
+    id: 6,
+    question: "Which of the following is not allowed in Python variable names?",
+    options: ["_value", "value2", "2value", "value_name"],
+    correctAnswer: "2value",
+  },
+  {
+    id: 7,
+    question: "What is the default value of an uninitialized variable in Python?",
+    options: ["0", "None", "null", "Python doesn't allow uninitialized variables"],
+    correctAnswer: "Python doesn't allow uninitialized variables",
+  },
+  {
+    id: 8,
+    question: "Which character is used to start a variable name in Python?",
+    options: ["Digit", "Letter or underscore", "Hyphen", "Space"],
+    correctAnswer: "Letter or underscore",
+  },
+  {
+    id: 9,
+    question: "Variables in Python are:",
+    options: ["Dynamically typed", "Statically typed", "Manually typed", "None of the above"],
+    correctAnswer: "Dynamically typed",
+  },
+  {
+    id: 10,
+    question: "Which of the following is case-sensitive in Python?",
+    options: ["Variable names", "Keywords", "Both", "None"],
+    correctAnswer: "Both",
+  },
+  {
+    id: 11,
+    question: "Which is a correct assignment in Python?",
+    options: ["x := 5", "int x = 5", "x = 5", "let x = 5"],
+    correctAnswer: "x = 5",
+  },
+  {
+    id: 12,
+    question: "What is the output of: x = '5'; print(type(x))?",
+    options: ["<class 'int'>", "<class 'str'>", "<class 'float'>", "<class 'bool'>"],
+    correctAnswer: "<class 'str'>",
+  },
+  {
+    id: 13,
+    question: "What does the 'type()' function return?",
+    options: ["Value of a variable", "Size of variable", "Data type of variable", "None"],
+    correctAnswer: "Data type of variable",
+  },
+  {
+    id: 14,
+    question: "Which of these is a mutable variable?",
+    options: ["List", "Tuple", "String", "Integer"],
+    correctAnswer: "List",
+  },
+  {
+    id: 15,
+    question: "What is the output of: x = None; print(x)?",
+    options: ["none", "0", "None", "null"],
+    correctAnswer: "None",
+  },
+  {
+    id: 16,
+    question: "Which function can be used to get input from user?",
+    options: ["input()", "print()", "scan()", "read()"],
+    correctAnswer: "input()",
+  },
+  {
+    id: 17,
+    question: "Python variables are:",
+    options: ["Strongly typed", "Weakly typed", "Untyped", "Moderately typed"],
+    correctAnswer: "Strongly typed",
+  },
+  {
+    id: 18,
+    question: "What is the correct syntax for multi-variable assignment?",
+    options: ["a, b = 1, 2", "a = b = 1, 2", "a = b : 1, 2", "a <- b <- 1, 2"],
+    correctAnswer: "a, b = 1, 2",
+  },
+  {
+    id: 19,
+    question: "Which of the following types is immutable?",
+    options: ["list", "dict", "set", "tuple"],
+    correctAnswer: "tuple",
+  },
+  {
+    id: 20,
+    question: "Which method converts string to integer?",
+    options: ["str()", "float()", "int()", "char()"],
+    correctAnswer: "int()",
+  },
+  {
+    id: 21,
+    question: "Which symbol is used for assignment?",
+    options: ["==", ":=", "=", "=>"],
+    correctAnswer: "=",
+  },
+  {
+    id: 22,
+    question: "How do you comment a single line in Python?",
+    options: ["// comment", "# comment", "/* comment */", "-- comment"],
+    correctAnswer: "# comment",
+  },
+  {
+    id: 23,
+    question: "Which data type is used to store whole numbers?",
+    options: ["str", "float", "int", "bool"],
+    correctAnswer: "int",
+  },
+  {
+    id: 24,
+    question: "What is the result of: x = 3 + 4.5?",
+    options: ["7.5", "7", "34.5", "Error"],
+    correctAnswer: "7.5",
+  },
+  {
+    id: 25,
+    question: "Can we assign different data types to variables?",
+    options: ["No", "Only if same class", "Yes", "Only int and float"],
+    correctAnswer: "Yes",
+  },
+  {
+    id: 26,
+    question: "Which function is used to display output?",
+    options: ["show()", "input()", "print()", "output()"],
+    correctAnswer: "print()",
+  },
+  {
+    id: 27,
+    question: "Which one is a valid Python statement?",
+    options: ["int = 5", "class = 3", "3x = 9", "def = 2"],
+    correctAnswer: "int = 5",
+  },
+  {
+    id: 28,
+    question: "Which is a reserved keyword in Python?",
+    options: ["value", "var", "def", "sum"],
+    correctAnswer: "def",
+  },
+  {
+    id: 29,
+    question: "What is the maximum length of a variable name in Python?",
+    options: ["255", "Unlimited", "31", "128"],
+    correctAnswer: "Unlimited",
+  },
+  {
+    id: 30,
+    question: "Which of the following can start a variable name?",
+    options: ["Number", "Underscore", "Dash", "Space"],
+    correctAnswer: "Underscore",
+  },
+];
+
+export default variablesTest;
