@@ -8,7 +8,7 @@ import ContactForm from "./ContactForm";
 import StudentSlider from '../components/StudentSlider'
 import Footer from "./Footer";
 import Countdown from "react-countdown";
-import { Link } from "react-router-dom";
+
 import "../style/Home.css";
 
 const Completionist = () => <span>Offer ended!</span>;
