@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import dataTypesTest from "../tests/dataTypesTest";
 import operatorsTest from "../tests/operatorsTest";
@@ -7,12 +7,7 @@ import loopsTest from "../tests/loopsTest";
 import functionsTest from "../tests/functionsTest";
 import listsTest from "../tests/listsTest";
 import fileHandlingTest from "../tests/fileHandlingTest";
-
 import tuplesSetsDictsTest from "../tests/tuplesSetsDictsTest";
-
-
-
-
 import variablesTest from "../tests/variablesTest";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,14 +25,8 @@ function TopicTestPage() {
     8: loopsTest,
     14: functionsTest,
     16: fileHandlingTest,
-
     17: listsTest,
     18: tuplesSetsDictsTest,
-
-
-
-
-
   };
 
   const topicTitles = {
@@ -48,14 +37,8 @@ function TopicTestPage() {
     8: "Loops",
     14: "Functions",
     16: "File Handling",
-
     17: "Lists",
     18: "Tuple, Set & Dictionary",
-
-
-
-
-
   };
 
   const questions = topicTests[id];
@@ -72,6 +55,24 @@ function TopicTestPage() {
   const [timeLeft, setTimeLeft] = useState(totalTime);
   const [wrongAnswers, setWrongAnswers] = useState([]);
 
+  const handleSubmit = useCallback(() => {
+    toast.info("✅ Thank you for attending the exam!", {
+      position: "bottom-center",
+    });
+
+    setTimeout(() => {
+      navigate("/result", {
+        state: {
+          score,
+          coins,
+          total: questions.length,
+          wrongAnswers,
+          studentName, // ✅ pass name to result
+        },
+      });
+    }, 1500);
+  }, [navigate, score, coins, questions.length, wrongAnswers, studentName]);
+
   useEffect(() => {
     if (testStarted) {
       const timer = setInterval(() => {
@@ -86,7 +87,7 @@ function TopicTestPage() {
       }, 1000);
       return () => clearInterval(timer);
     }
-  }, [testStarted]);
+  }, [testStarted, handleSubmit]);
 
   const formatTime = (t) => {
     const m = Math.floor(t / 60);
@@ -140,29 +141,10 @@ function TopicTestPage() {
     }
   };
 
-  const handleSubmit = () => {
-    toast.info("✅ Thank you for attending the exam!", {
-      position: "bottom-center",
-    });
-
-    setTimeout(() => {
-      navigate("/result", {
-        state: {
-          score,
-          coins,
-          total: questions.length,
-          wrongAnswers,
-          studentName, // ✅ pass name to result
-        },
-      });
-    }, 1500);
-  };
-
   if (!questions) {
     return <h2 style={{ color: "red" }}>Test Not Found</h2>;
   }
 
-  // ✅ Step before test starts
   if (!testStarted) {
     return (
       <div className="test-container">

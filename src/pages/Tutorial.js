@@ -3,7 +3,14 @@ import Playground from "../components/Playground";
 import SearchBar from "../components/SearchBar";
 import ContactWidget from "../components/ContactWidget";
 
-import topicsData from "../data/topics";
+import topicsData from "../data/topics";       // Python
+import mysqlData from "../data/mysqldata";     // MySQL
+import htmlData from "../data/htmldata";       // HTML
+import cssData from "../data/cssdata";         // CSS
+import jsData from "../data/jsdata";           // JavaScript
+import es6Data from "../data/es6data";         // ES6
+import reactData from "../data/reactdata";     // React
+
 import '../style/Feedback.css';
 import '../style/Tutorial.css';
 
@@ -16,6 +23,24 @@ function Tutorial() {
   const [results, setResults] = useState([]);
   const [feedbacks, setFeedbacks] = useState([]);
   const [feedbackText, setFeedbackText] = useState("");
+  const [feedbackName, setFeedbackName] = useState("");   
+  const [selectedCategory, setSelectedCategory] = useState("Python");
+
+  // ✅ Subjects data map (fallback [] lagaya)
+  const subjects = {
+    Python: topicsData || [],
+    MySQL: mysqlData || [],
+    HTML: htmlData || [],
+    CSS: cssData || [],
+    JavaScript: jsData || [],
+    ES6: es6Data || [],
+    React: reactData || [],
+  };
+
+  // ✅ Merge all for search
+  const allTopics = Object.entries(subjects).flatMap(([subject, data]) =>
+    Array.isArray(data) ? data.map((topic) => ({ ...topic, subject })) : []
+  );
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("feedbacks")) || [];
@@ -26,8 +51,8 @@ function Tutorial() {
     setQuery(q);
     setLoading(true);
     setTimeout(() => {
-      const filtered = topicsData.filter((topic) =>
-        topic.title.toLowerCase().includes(q.toLowerCase())
+      const filtered = allTopics.filter((topic) =>
+        topic.title?.toLowerCase().includes(q.toLowerCase())
       );
       setResults(filtered);
       setLoading(false);
@@ -35,9 +60,15 @@ function Tutorial() {
   };
 
   const submitFeedback = () => {
+    if (!feedbackName.trim()) {
+      toast.error("Please enter your name!");
+      return;
+    }
+
     if (feedbackText.trim()) {
       const newFeedback = {
         id: Date.now(),
+        name: feedbackName,
         text: feedbackText,
         liked: false,
         likes: 0,
@@ -46,6 +77,7 @@ function Tutorial() {
       setFeedbacks(updated);
       localStorage.setItem("feedbacks", JSON.stringify(updated));
       setFeedbackText("");
+      setFeedbackName("");  
       toast.success("Thank you for your feedback!");
     } else {
       toast.error("Feedback cannot be empty!");
@@ -74,18 +106,35 @@ function Tutorial() {
 
   return (
     <div className="tutorial-page">
+      {/* ✅ Sidebar */}
       <div className="sidebar">
-        {topicsData.map((topic) => (
-          <div
-            key={topic.id}
-            className="sidebar-item"
-            onClick={() => handleSearch(topic.title)}
-          >
-            {topic.title}
-          </div>
-        ))}
+        {/* Dropdown for selecting category */}
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="category-dropdown"
+        >
+          {Object.keys(subjects).map((subj) => (
+            <option key={subj} value={subj}>
+              {subj}
+            </option>
+          ))}
+        </select>
+
+        {/* Topics for selected category */}
+        {Array.isArray(subjects[selectedCategory]) &&
+          subjects[selectedCategory].map((topic) => (
+            <div
+              key={topic.id}
+              className="sidebar-item"
+              onClick={() => handleSearch(topic.title)}
+            >
+              {topic.title}
+            </div>
+          ))}
       </div>
 
+      {/* ✅ Main Content */}
       <div className="content-area">
         <SearchBar onSearch={handleSearch} />
         
@@ -100,10 +149,13 @@ function Tutorial() {
         ) : results.length > 0 ? (
           results.map((topic) => (
             <div key={topic.id} className="topic-box">
-              <h2>{topic.title}</h2>
+              <h2>
+                {topic.title}{" "}
+                <span className="subject-tag">({topic.subject})</span>
+              </h2>
               <div dangerouslySetInnerHTML={{ __html: topic.description }} />
-              <pre className="syntax-box">{topic.syntax}</pre>
-              <Playground exampleCode={topic.example} />
+              {topic.syntax && <pre className="syntax-box">{topic.syntax}</pre>}
+              {topic.example && <Playground exampleCode={topic.example} />}
             </div>
           ))
         ) : (
@@ -117,6 +169,12 @@ function Tutorial() {
         {/* ✅ Feedback Section */}
         <div className="feedback-section">
           <h3>Feedback</h3>
+          <input
+            type="text"
+            placeholder="Enter your name..."
+            value={feedbackName}
+            onChange={(e) => setFeedbackName(e.target.value)}
+          />
           <textarea
             rows="4"
             placeholder="Write your feedback..."
@@ -128,7 +186,7 @@ function Tutorial() {
           <ul className="feedback-list">
             {feedbacks.map((fb) => (
               <li key={fb.id} className="feedback-item">
-                <span>{fb.text}</span>
+                <strong>{fb.name}:</strong> {fb.text}
                 <div className="feedback-actions">
                   <button onClick={() => toggleLike(fb.id)} title="Like">
                     {fb.liked ? "❤️" : "🤍"} {fb.likes}
@@ -143,10 +201,8 @@ function Tutorial() {
         </div>
       </div>
 
-      {/* 🔔 Toast container */}
       <ToastContainer position="bottom-right" />
       <ContactWidget />
-
     </div>
   );
 }

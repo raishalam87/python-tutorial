@@ -115,6 +115,16 @@
   line-height: 1.6;
 }
 
+.category-dropdown{
+  border: 1px solid #4444;
+  width: 200px;
+  font-size: 15px;
+  color: #222;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+
 /* Responsive for mobile screens */
 @media (max-width: 768px) {
   .tutorial-page {

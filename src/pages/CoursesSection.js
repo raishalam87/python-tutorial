@@ -67,7 +67,7 @@ const CoursesSection = () => {
             <p className="price">{course.price}</p>
             <div className="button-group">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917703988759"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="join-btn"

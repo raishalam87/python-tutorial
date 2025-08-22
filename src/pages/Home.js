@@ -14,13 +14,13 @@ import "../style/Home.css";
 const Completionist = () => <span>Offer ended!</span>;
 
 const Home = () => {
-  const offerEndDate = new Date("2025-08-10T23:59:59");
+  const offerEndDate = new Date("2025-08-20T23:59:59");
 
   return (
     <div>
     <div className="home-section">
       <div className="home-content">
-        <h2 className="heading">New Batch Starting <span className="highlight">10 August</span></h2>
+        <h2 className="heading">New Batch Starting <span className="highlight">20 August</span></h2>
         <p className="subtext">
           Join our CBSE & Industry-based Python course. Limited seats only! <br />
           Grab your seat with <strong>24x7 mentorship support</strong> and <strong>100+ live projects</strong>.
@@ -36,7 +36,7 @@ const Home = () => {
             )
           } />
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/917703988759"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"

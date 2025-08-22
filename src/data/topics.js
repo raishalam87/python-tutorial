@@ -1,54 +1,75 @@
 // File: src/data/topics.js
 const topics = [
  {
-  id: 1,
-  title: "What is Python?",
-  description: `
-    <p><strong>Python</strong> is an interpreted, dynamically-typed programming language.</p>
-    
-    <h3>Explanation of terms</h3>
-    <ul>
-      <li><strong>Interpreted:</strong> Python code is run line by line by an interpreter (not compiled at once).</li>
-      <li><strong>Dynamically-typed:</strong> You don’t need to define variable types. Python figures it out at runtime.</li>
-      <li><strong>Programming language:</strong> A way to give instructions to a computer.</li>
-    </ul>
+id: 1,
+title: "What is Python?",
+description: `
+  <p><strong>Python</strong> is an interpreted, dynamically-typed programming language.</p>
+  
+  <h3>Explanation of terms</h3>
+  <ul>
+    <li><strong>Interpreted:</strong> Python code is run line by line by an interpreter (not compiled at once).</li>
+    <li><strong>Dynamically-typed:</strong> You don’t need to define variable types. Python figures it out at runtime.</li>
+    <li><strong>Programming language:</strong> A way to give instructions to a computer.</li>
+  </ul>
 
-    <h3>👨‍💻 Who developed Python?</h3>
-    <p>Guido van Rossum (Netherlands)</p>
+  <h3>👨‍💻 Who developed Python?</h3>
+  <p>Guido van Rossum (Netherlands)</p>
 
-    <h3>📅 When was Python released?</h3>
-    <p>January 26, 1991</p>
+  <h3>📅 When was Python released?</h3>
+  <p>January 26, 1991</p>
 
-    <h3>💡 Where is Python Used?</h3>
-    <ul>
-      <li>🤖 Artificial Intelligence (AI) & Machine Learning</li>
-      <li>📊 Data Analytics & Data Science</li>
-      <li>🎮 Game Development</li>
-      <li>🌐 Web Development</li>
-    </ul>
-  `,
-  syntax: "",
-  example: `print("Hello, World!")`
+  <h3>💡 Where is Python Used?</h3>
+  <ul>
+    <li>🤖 Artificial Intelligence (AI) & Machine Learning</li>
+    <li>📊 Data Analytics & Data Science</li>
+    <li>🎮 Game Development</li>
+    <li>🌐 Web Development</li>
+  </ul>
+
+  <h3>🎥 Watch Video Explanation</h3>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/4vhD6g6IGs8?si=nHZ5aDTqO55l44cP" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+`,
+syntax: "",
+example: `print("Hello, World!")`
 },
+
+
 {
   id: 2,
-  title: "Scope in Python",
-  description: `
-    <p><strong>Scope</strong> refers to the region of the code where a variable can be accessed.</p>
+title: "Scope in Python",
+description: `
+  <p><strong>Scope</strong> refers to the region of the code where a variable can be accessed.</p>
 
-    <h3>1. Local Scope</h3>
-    <p>A variable declared inside a function is local to that function.</p>
+  <h3>1. Local Scope</h3>
+  <p>A variable declared inside a function is local to that function.</p>
 
-    <h3>2. Global Scope</h3>
-    <p>A variable declared outside any function is global and accessible everywhere.</p>
+  <h3>2. Global Scope</h3>
+  <p>A variable declared outside any function is global and accessible everywhere.</p>
 
-    <h3>3. Enclosing Scope (Nested Functions)</h3>
-    <p>Inner functions can access variables from the enclosing outer function.</p>
+  <h3>3. Enclosing Scope (Nested Functions)</h3>
+  <p>Inner functions can access variables from the enclosing outer function.</p>
 
-    <h3>4. Built-in Scope</h3>
-    <p>These are names preassigned in Python, like <code>len()</code>, <code>range()</code>.</p>
-  `,
-  syntax: `# Local Scope
+  <h3>4. Built-in Scope</h3>
+  <p>These are names preassigned in Python, like <code>len()</code>, <code>range()</code>.</p>
+
+  <h3>🎥 Watch Video Explanation</h3>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/Mgm-pH0N9-Q?si=PgRgovDbkEck6AFv" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+`,
+
+syntax: `# Local Scope
 def greet():
     name = "Raish"
     print("Hello", name)
@@ -66,7 +87,8 @@ def outer():
 
 # Built-in Scope
 len(["a", "b", "c"])`,
-  example: `# Local Scope Example
+
+example: `# Local Scope Example
 def greet():
     name = "Raish"
     print("Hello", name)
@@ -95,6 +117,7 @@ outer()
 fruits = ["apple", "banana", "mango"]
 print("Number of fruits:", len(fruits))`
 }
+
 ,
 {
   id: 3,
@@ -125,6 +148,9 @@ print("Number of fruits:", len(fruits))`
       <li>🔹 <strong>Local Variable</strong>: Defined inside a function. Only accessible there.</li>
       <li>🔹 <strong>Global Variable</strong>: Defined outside all functions. Accessible everywhere.</li>
     </ul>
+    <h3>🎥 Watch Video Explanation</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/bIAZrKrJaAo?si=1nWP__lZPLw1L452" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
   `,
   syntax: `# Declaring different types of variables
 name = "Raish"       # string
@@ -167,7 +193,7 @@ my_function()
 }
 ,
 {
-  id: 4,
+  id: 'py_datatypes',
   title: "Data Types",
   description: `
     <p>Python has different types of data to store different kinds of values.</p>
@@ -186,6 +212,7 @@ my_function()
       <li><strong>is_student</strong> = True → Is she a student? (boolean)</li>
       <li><strong>grade</strong> = 89.5 → Percentage marks (float)</li>
     </ul>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bIAZrKrJaAo?si=1nWP__lZPLw1L452" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   `,
   syntax: `# String (text)
 name = "Alice"
@@ -1452,314 +1479,6 @@ exploit
     </ol>
 
     <p>✔️ These questions can be added to a test page, assignment section, or daily practice module.</p>
-  `
-},
-{
-  id: "mysql-intro",
-  title: "Introduction to MySQL",
-  description: `
-    <h2>What is MySQL?</h2>
-    <p>MySQL is a popular open-source relational database management system (RDBMS) used to store, manage, and retrieve data. It is based on SQL (Structured Query Language) and is widely used in web applications, data-driven websites, and software projects.</p>
-
-    <h3>Key Features of MySQL:</h3>
-    <ul>
-      <li>Open-source and free to use.</li>
-      <li>Uses Structured Query Language (SQL).</li>
-      <li>Supports large databases (up to 50 million rows or more).</li>
-      <li>Secure, fast, and scalable.</li>
-      <li>Works on many operating systems like Windows, Linux, and macOS.</li>
-    </ul>
-
-    <h3>Where is MySQL used?</h3>
-    <ul>
-      <li>Websites (e.g., WordPress, Facebook, YouTube use MySQL).</li>
-      <li>Data management for apps.</li>
-      <li>Backend database for software systems.</li>
-    </ul>
-
-    <h3>Why learn MySQL?</h3>
-    <ul>
-      <li>Important for backend development.</li>
-      <li>Required for full-stack development.</li>
-      <li>Frequently asked in CBSE/ISC board exams and interviews.</li>
-    </ul>
-
-    <h3>Basic MySQL Commands:</h3>
-    <pre>
-CREATE DATABASE school;
-USE school;
-CREATE TABLE students (
-  id INT PRIMARY KEY,
-  name VARCHAR(50),
-  age INT
-);
-INSERT INTO students VALUES (1, 'Aman', 17);
-SELECT * FROM students;
-    </pre>
-  `,
-},
-{
-  id: "rdbms-vs-nonrdbms",
-  title: "Difference between RDBMS and Non-RDBMS",
-  description: `
-    <h2>What is RDBMS?</h2>
-    <p>RDBMS stands for <strong>Relational Database Management System</strong>. It stores data in the form of tables (rows and columns) with relationships between them. Examples include MySQL, PostgreSQL, Oracle, and MS SQL Server.</p>
-
-    <h2>What is Non-RDBMS (NoSQL)?</h2>
-    <p>Non-RDBMS refers to <strong>Non-Relational Databases</strong> which store data in formats like documents, key-value pairs, graphs, or wide-columns. These databases are designed for high scalability and flexibility. Examples include MongoDB, Redis, Cassandra, and CouchDB.</p>
-
-    <h3>Key Differences:</h3>
-    <table border="1" cellpadding="8" cellspacing="0">
-      <tr>
-        <th>Feature</th>
-        <th>RDBMS</th>
-        <th>Non-RDBMS (NoSQL)</th>
-      </tr>
-      <tr>
-        <td>Data Storage</td>
-        <td>Tables (Rows & Columns)</td>
-        <td>Documents, Key-Value, Graph, etc.</td>
-      </tr>
-      <tr>
-        <td>Schema</td>
-        <td>Fixed schema (structured)</td>
-        <td>Dynamic schema (unstructured/semi-structured)</td>
-      </tr>
-      <tr>
-        <td>Relationships</td>
-        <td>Supports relationships using foreign keys</td>
-        <td>Does not support complex relationships</td>
-      </tr>
-      <tr>
-        <td>Query Language</td>
-        <td>SQL</td>
-        <td>No standard language (uses JSON, APIs)</td>
-      </tr>
-      <tr>
-        <td>Examples</td>
-        <td>MySQL, Oracle, PostgreSQL</td>
-        <td>MongoDB, Cassandra, Redis</td>
-      </tr>
-    </table>
-
-    <h3>When to Use:</h3>
-    <ul>
-      <li><strong>RDBMS</strong>: When your data is structured and requires relationships (e.g., School DB).</li>
-      <li><strong>Non-RDBMS</strong>: When your data is flexible or large-scale (e.g., real-time analytics, logs).</li>
-    </ul>
-  `
-},
-{
-  id: "sql-introduction",
-  title: "Introduction to SQL",
-  description: `
-    <h2>What is SQL?</h2>
-    <p><strong>SQL</strong> stands for <strong>Structured Query Language</strong>. It is a standard language used to communicate with relational databases. SQL is used to <strong>create</strong>, <strong>read</strong>, <strong>update</strong>, and <strong>delete</strong> (CRUD) data in a database.</p>
-
-    <h3>Key Uses of SQL:</h3>
-    <ul>
-      <li>Create and manage databases and tables.</li>
-      <li>Insert, update, and delete records.</li>
-      <li>Retrieve specific data using queries.</li>
-      <li>Manage user permissions and access control.</li>
-    </ul>
-
-    <h3>Examples of SQL-Based Databases:</h3>
-    <ul>
-      <li>MySQL</li>
-      <li>PostgreSQL</li>
-      <li>Oracle</li>
-      <li>MS SQL Server</li>
-    </ul>
-
-    <h3>Simple SQL Example:</h3>
-    <pre>
-SELECT name, age FROM students WHERE age &gt; 16;
-    </pre>
-  `
-},
-{
-  id: "create-table-sql",
-  title: "Creating Tables in SQL",
-  description: `
-    <h2>How to Create a Table in SQL?</h2>
-    <p>In SQL, the <strong>CREATE TABLE</strong> statement is used to create a new table in the database. You must specify the table name and define its columns with their respective data types.</p>
-
-    <h3>Syntax:</h3>
-    <pre>
-CREATE TABLE table_name (
-  column1 datatype,
-  column2 datatype,
-  column3 datatype,
-  ...
-);
-    </pre>
-
-    <h3>Example:</h3>
-    <pre>
-CREATE TABLE students (
-  id INT PRIMARY KEY,
-  name VARCHAR(50),
-  age INT,
-  admission_date DATE
-);
-    </pre>
-
-    <h3>Explanation:</h3>
-    <ul>
-      <li><code>id</code> is an integer and primary key.</li>
-      <li><code>name</code> is a string of max 50 characters.</li>
-      <li><code>age</code> is an integer.</li>
-      <li><code>admission_date</code> stores the date of admission.</li>
-    </ul>
-
-    <p>After creating the table, you can insert data using the <code>INSERT INTO</code> command.</p>
-  `
-},
-{
-  id: "mysql-data-types",
-  title: "MySQL Data Types",
-  description: `
-    <h2>What are Data Types in MySQL?</h2>
-    <p>Data types define the kind of value a column can hold in a MySQL table. Choosing the correct data type ensures that the data is stored efficiently and correctly.</p>
-
-    <h3>Common Data Types in MySQL:</h3>
-
-    <h4>1. Numeric Data Types:</h4>
-    <ul>
-      <li><code>INT</code> – Whole numbers (e.g., 1, 100, -20)</li>
-      <li><code>FLOAT</code> – Decimal numbers with floating point (e.g., 3.14, 2.5)</li>
-      <li><code>DOUBLE</code> – More precise floating point numbers</li>
-    </ul>
-
-    <h4>2. String Data Types:</h4>
-    <ul>
-      <li><code>CHAR(n)</code> – Fixed-length string (e.g., CHAR(10))</li>
-      <li><code>VARCHAR(n)</code> – Variable-length string (e.g., VARCHAR(50))</li>
-      <li><code>TEXT</code> – Large text data</li>
-    </ul>
-
-    <h4>3. Date and Time Data Types:</h4>
-    <ul>
-      <li><code>DATE</code> – Stores date (YYYY-MM-DD)</li>
-      <li><code>DATETIME</code> – Stores date and time</li>
-      <li><code>TIME</code> – Stores time (HH:MM:SS)</li>
-    </ul>
-
-    <h4>4. Boolean:</h4>
-    <ul>
-      <li><code>BOOLEAN</code> – Stores TRUE or FALSE (Internally as 1 or 0)</li>
-    </ul>
-
-    <h3>Example Table with Data Types:</h3>
-    <pre>
-CREATE TABLE employees (
-  emp_id INT,
-  emp_name VARCHAR(100),
-  salary FLOAT,
-  join_date DATE,
-  is_active BOOLEAN
-);
-    </pre>
-  `
-},
-{
-  id: "insert-data-sql",
-  title: "Inserting Data into Tables",
-  description: `
-    <h2>How to Insert Data in SQL?</h2>
-    <p>The <strong>INSERT INTO</strong> statement is used to add new rows of data into a table.</p>
-
-    <h3>Syntax:</h3>
-    <pre>
-INSERT INTO table_name (column1, column2, ...) 
-VALUES (value1, value2, ...);
-    </pre>
-
-    <h3>Example:</h3>
-    <pre>
-INSERT INTO students (id, name, age) 
-VALUES (1, 'Aman', 17);
-    </pre>
-
-    <h3>Inserting Multiple Rows:</h3>
-    <pre>
-INSERT INTO students (id, name, age) VALUES 
-(2, 'Reema', 16),
-(3, 'Arjun', 18);
-    </pre>
-
-    <p>Make sure the values match the column order and data types defined in the table.</p>
-  `
-},
-{
-  id: "select-data-sql",
-  title: "Retrieving Data from Tables",
-  description: `
-    <h2>How to Retrieve Data in SQL?</h2>
-    <p>The <strong>SELECT</strong> statement is used to fetch data from one or more columns of a table.</p>
-
-    <h3>Syntax:</h3>
-    <pre>
-SELECT column1, column2 FROM table_name;
--- or to select all columns:
-SELECT * FROM table_name;
-    </pre>
-
-    <h3>Example:</h3>
-    <pre>
-SELECT name, age FROM students;
-SELECT * FROM students;
-    </pre>
-
-    <h3>Using Aliases:</h3>
-    <pre>
-SELECT name AS 'Student Name', age AS 'Age' FROM students;
-    </pre>
-  `
-},
-{
-  id: "update-data-sql",
-  title: "Updating Data in Tables",
-  description: `
-    <h2>How to Update Data in SQL?</h2>
-    <p>The <strong>UPDATE</strong> statement is used to modify existing data in a table.</p>
-
-    <h3>Syntax:</h3>
-    <pre>
-UPDATE table_name 
-SET column1 = value1, column2 = value2 
-WHERE condition;
-    </pre>
-
-    <h3>Example:</h3>
-    <pre>
-UPDATE students 
-SET age = 18 
-WHERE id = 1;
-    </pre>
-
-    <p><strong>Note:</strong> Always use a <code>WHERE</code> clause to avoid updating all rows!</p>
-  `
-},
-{
-  id: "delete-data-sql",
-  title: "Deleting Data from Tables",
-  description: `
-    <h2>How to Delete Data in SQL?</h2>
-    <p>The <strong>DELETE</strong> statement is used to remove one or more rows from a table.</p>
-
-    <h3>Syntax:</h3>
-    <pre>
-DELETE FROM table_name WHERE condition;
-    </pre>
-
-    <h3>Example:</h3>
-    <pre>
-DELETE FROM students WHERE id = 3;
-    </pre>
-
-    <p><strong>Warning:</strong> Without a <code>WHERE</code> clause, all records will be deleted!</p>
   `
 },
 
